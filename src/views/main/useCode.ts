@@ -36,7 +36,6 @@ export const useCode = (email:string,callback:any) => {
 			clearInterval(timeOut)
 			count = "发送验证码"
 		}
-		console.log(typeof(count))
 		if(count === "发送验证码"){
 			callback(count)
 		}else{
