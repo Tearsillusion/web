@@ -19,6 +19,7 @@ export default  defineComponent({
   setup(props: any, content: any) {
     // 获取编辑器实例html
     const editor = ref();
+	let status = 1
     // 编辑器实例对象
     let instance: any = '';
     onMounted(() => {
@@ -101,6 +102,7 @@ export default  defineComponent({
         onchange() {
           // 将值instance.txt.html() 传递至父组件
           content.emit('onchange', instance.txt.html());
+		  
         },
         // 上传网络图片回调
         linkImgCallback(src:string){
@@ -133,7 +135,12 @@ export default  defineComponent({
         instance.txt.html(props.contentHtml)
     });
 	onUpdated (() => {
-		instance.txt.html(props.contentHtml)
+		if(props.contentHtml&&status==1){
+			instance.txt.html(props.contentHtml)
+			status = 0
+		}
+		
+		
 	})
    //  页面卸载
     onBeforeUnmount(() => {
