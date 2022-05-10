@@ -13,7 +13,6 @@ export const useCode = (email:string,callback:any) => {
 		HttpVerificationCode({
 			email:email
 		}).then((res:any)=>{
-			console.log(res)
 			if(res.code === 200){
 				ElMessage({
 				    message: '发送成功!',
