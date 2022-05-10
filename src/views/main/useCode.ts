@@ -28,7 +28,7 @@ export const useCode = (email:string,callback:any) => {
 		})
 	}
 	sendCode(email)
-	let count = 10 as any
+	let count = 60 as any
 	const timeOut = setInterval(()=>{
 		if(count > 0){
 			count--
