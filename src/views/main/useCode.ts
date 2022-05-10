@@ -40,6 +40,6 @@ export const useCode = (email:string,callback:any) => {
 		}else{
 			callback(`剩余${count}s`)
 		}
-		console.log(1111122333)
+		console.log(11111)
 	},1000)
 }
