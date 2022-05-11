@@ -3,7 +3,7 @@
 		<img v-if="item.image_path" :src="item.image_path?item.image_path:require('../assets/image/icon-defalut.png')" @error="(e)=>{e.target.src = require('../assets/image/icon-defalut.png')}" @click="communityClick(item)" >
 		<div class="common-rect-list-right" :style="{width:!item.image_path?'100%!important':''}">
 			<h3>{{item.title}}</h3>
-			<p v-html="item.content.replace(/\s*/g,'')" class="common-rect-list-right-dec"></p>
+			<p v-html="item.content.replace(/<[^>]+>/g, '')" class="common-rect-list-right-dec"></p>
 			<span>{{item.create_time}}</span>
 		</div>
 	</div>
@@ -82,6 +82,7 @@
 				overflow: hidden;
 				margin: 0;
 				line-height: 20px;
+				
 			}
 			span{
 				font-size: 13px;

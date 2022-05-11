@@ -145,6 +145,7 @@
 				data.navData[3].count = res.data.collectionCount
 				let oldUserInfo = store.state.userInfoX
 				oldUserInfo.nickName = res.data.nickName
+				oldUserInfo.user_type = res.data.user_type
 				store.commit("userInfoMain",JSON.stringify(oldUserInfo))
 			}
 			console.log(res)

@@ -7,7 +7,7 @@
 				</el-form-item>
 			</el-form>
 			<el-form :model="data" label-width="120px">
-				<el-form-item label="展示图片">
+				<el-form-item label="文章封面">
 					<el-upload class="avatar-uploader" action="##" :show-file-list="false" :http-request="httpRequest"
 						:before-upload="beforeAvatarUpload">
 						<img v-if="imageUrl" :src="imageUrl" class="avatar" />
