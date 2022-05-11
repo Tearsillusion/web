@@ -8,12 +8,12 @@
 			</div>
 		</div>
 		<el-card>
-		  <img
+		  <!-- <img
 			:src="data.communityDetail.image_path"
 			v-if="data.communityDetail.image_path"
 			@error="(e)=>{data.communityDetail.image_path = null}"
 			class="image"
-		  />
+		  /> -->
 		  <div class="el-card-info">
 		    <div class="el-card-info-title">
 			  <strong>{{data.communityDetail.title}}</strong>
